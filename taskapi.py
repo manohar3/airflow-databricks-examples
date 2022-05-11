@@ -24,7 +24,9 @@ default_args = {
     'trigger_rule': 'one_success'
 }
 
-databricks_conn_id = "mydbconnection"
+#replace connection
+databricks_conn_id = <connection-id>
+
 hook = DatabricksHook(
               databricks_conn_id,
               timeout_seconds = 180,
@@ -74,7 +76,7 @@ def analytics_pipeline():
     json_request = {
      'existing_cluster_id': json_object['cluster_id'],
      'notebook_task': {
-       'notebook_path': '/Users/manohar.chamaraju@microfocus.com/manohar1'
+       'notebook_path': '/Users/manohar_mc@yahoo.co.in/manohar'
       }
     }
     op = DatabricksSubmitRunOperator(databricks_conn_id=databricks_conn_id, task_id='notebook_run', json=json_request)   
