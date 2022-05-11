@@ -1,6 +1,6 @@
 # airflow-examples
 
-Python file contains code to create databricks cluster, run some jobs and destry cluster using task flow api and task grouping machanism
+Python file contains code to create databricks cluster, run spark job, run notebook and destroy cluster using task flow api and task grouping machanism
 
 # how to run
 Copy this file to dag folder of airflow and udpate connection name in file
